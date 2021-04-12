@@ -72,24 +72,7 @@
                     </span>
                 </div>
                 <div class="panel-body panel-b">
-                    <div class="row edit_fild" style="display: none">
-                        <h5 class="col-6">Ahmed ALi</h5>
-                        <span class="timess text-right col-6"><i class=" times fas fa-times"></i></span>
-                            <form action="" method="post">
-                                <div class="col-md-12   mb-1 form-row ">
-                                    <div class="form-group col-md-5">
-                                        <input type="text" name="cname" value="" class="edit_name mb-1 form-control form-control-sm" placeholder="Name">
-                                    </div>
-                                    <div class="form-group col-md-5">
-                                        <input type="text" name="" id="" class=" edit_meter mb-1 form-control form-control-sm" placeholder="Meter">
-                                    </div>
-                                    <div class="form-group col-md-2">
-                                        <button class="btn btn-sm btn-success btn-block w-100">Edit</button>
-                                    </div>
-                                </div>
-                            </form>
 
-                    </div>
                     <div class="hide" >
                     @foreach ($AllTable as $Customer)
                         <div class="row rowID{{$Customer->id}}">
@@ -99,7 +82,7 @@
                             </div>
                             <div class="col-md-6  text-right mb-1">
                                 {{-- {{url('Orders/edit/'.$Customer->id)}} --}}
-                                    <a  href="" class='text-reset mr-2 edit'><i class="fa fa-edit icon_scale"></i></a>
+                                    <a  href="{{url('Orders/edit/'.$Customer->id)}}" class='text-reset mr-2 edit'><i class="fa fa-edit icon_scale"></i></a>
                                     <a  order_id="{{$Customer->id}}" class='text-reset mr-2 Delete'><i class="fa fa-trash icon_scale text-danger"></i></a>
                             </div>
                         </div>

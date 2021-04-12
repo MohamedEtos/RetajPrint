@@ -9,9 +9,6 @@ class CustomerData extends Model
 {
     use HasFactory;
     protected $table = 'CustomerData'; //name of table database
-    protected $fillable = [
-        'cname',
-        'meter',
-        'EMP'
-    ];
+    protected $guarded = [];
+
 }

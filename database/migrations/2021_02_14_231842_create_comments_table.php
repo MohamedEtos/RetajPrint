@@ -16,14 +16,14 @@ class CreateCommentsTable extends Migration
     {
 
         //insert this code in sql php my admin will be work
-        DB::unprepared('  
+        DB::unprepared('
         CREATE TRIGGER Restore
         BEFORE DELETE ON customerdeleted
         FOR EACH ROW
-        INSERT INTO CustomerData(id,cname,meter,EMP,WhoEdited,created_at,updated_at)
+        INSERT INTO customerdata(id,cname,meter,EMP,WhoEdited,created_at,updated_at)
         VALUES(old.id,old.cname,old.meter,old.EMP,old.WhoDelete,old.created_at,old.updated_at)
         ');
-        
+
         Schema::create('comments', function (Blueprint $table) {
             $table->id();
             $table->string('EmpCommet');

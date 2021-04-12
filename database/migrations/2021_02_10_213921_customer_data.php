@@ -25,13 +25,16 @@ class CustomerData extends Migration
         Schema::create('CustomerData', function (Blueprint $table) {
             $table->id();
             $table->string('cname');
-            $table->string('meter');
+            $table->integer('Ycopy');
+            $table->integer('FileHight');
+            $table->integer('meter');
+            $table->string('type');
+            $table->string('Printer');
+            $table->string('note')->nullable();
             $table->string('EMP');
             $table->string('WhoEdited')->default('Not modified yet');
             $table->timestamps();
         });
-
-
     }
 
     /**
